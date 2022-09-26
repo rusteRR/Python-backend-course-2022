@@ -11,6 +11,8 @@ packages = [{include = "python_backend_course_2022"}]
 python = "^3.9"
 fastapi = "^0.85.0"
 uvicorn = "^0.18.3"
+unittest = "^0.0"
+requests = "^2.28.1"
 
 
 [tool.poetry.group.dev.dependencies]

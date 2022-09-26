@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class User(BaseModel):
+class AuthModel(BaseModel):
     name: str
     age: int
-    cost: float
+    login: str
