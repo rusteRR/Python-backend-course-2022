@@ -16,7 +16,9 @@ class TestStringMethods(unittest.TestCase):
 
     def test_already_registered(self):
         with patch.dict(db_users_data, self.db_users_data):
-            result = auth.handler.register(AuthModel(login="rusteRR", password="12345", name="Alex"))
+            result = auth.handler.register(
+                AuthModel(login="rusteRR", password="12345", name="Alex")
+            )
             self.assertEqual(result, {"Error": "User is already registered"})
 
     def test_correct_register(self):
