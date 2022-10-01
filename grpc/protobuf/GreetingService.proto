@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Flight {
+  string date = 1;
+  string city_from = 2;
+  string city_to = 3;
+}
+
+message Confirmation {
+  bool is_flight_available = 1;
+}
+
+service FlightService {
+  rpc getFlight(Flight) returns (Confirmation);
+}
